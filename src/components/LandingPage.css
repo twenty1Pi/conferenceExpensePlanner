@@ -1,0 +1,113 @@
+.landing-page {
+min-height: 100vh;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><path fill="%235a67d8" d="M0 450L50 440C100 430 200 410 300 420C400 430 500 470 600 480C700 490 800 470 900 450C1000 430 1100 410 1150 400L1200 390V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V450Z"/><path fill="%234f5ac3" d="M0 500L50 490C100 480 200 460 300 465C400 470 500 500 600 510C700 520 800 510 900 495C1000 480 1100 460 1150 450L1200 440V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V500Z"/></svg>');
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.landing-overlay {
+background: rgba(0, 0, 0, 0.3);
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+}
+
+.landing-content {
+max-width: 800px;
+text-align: center;
+color: white;
+animation: fadeInUp 1s ease-out;
+}
+
+.company-name {
+font-size: 4rem;
+font-weight: 700;
+margin-bottom: 2rem;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+animation: fadeInDown 0.8s ease-out;
+}
+
+.company-description {
+font-size: 1.2rem;
+line-height: 1.8;
+margin-bottom: 3rem;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+animation: fadeIn 1.2s ease-out;
+}
+
+.get-started-btn {
+padding: 1.2rem 3rem;
+font-size: 1.3rem;
+font-weight: 600;
+color: white;
+background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+animation: fadeInUp 1.4s ease-out;
+}
+
+.get-started-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.get-started-btn:active {
+transform: translateY(-1px);
+}
+
+@keyframes fadeInDown {
+from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+@media (max-width: 768px) {
+.company-name {
+  font-size: 2.5rem;
+}
+
+.company-description {
+  font-size: 1rem;
+}
+
+.get-started-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+}
